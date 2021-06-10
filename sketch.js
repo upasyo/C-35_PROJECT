@@ -79,7 +79,7 @@ function draw() {
   drawSprites();
   fill(0);
   stroke("white");
-  textSize(25);
+  textSize(16);
   text("**Use arrow keys to move Hot Air Balloon!",width/8,40);
 }
 
