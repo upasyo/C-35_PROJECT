@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="p5.play.js"></script>
+    
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA3FCnHYAriD7nHqzDFnsWLyf32nJeVO4c",
+    authDomain: "air-balloon-ride-7c6e4.firebaseapp.com",
+    databaseURL: "https://air-balloon-ride-7c6e4-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "air-balloon-ride-7c6e4",
+    storageBucket: "air-balloon-ride-7c6e4.appspot.com",
+    messagingSenderId: "279224280035",
+    appId: "1:279224280035:web:393b563f15b078611af6d6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    
+
+  </head>
+  <body>
+      <script src="sketch.js"></script>
+      <script>
+        
+        window.addEventListener('deviceorientation', function(event) {
+        var gamma= event.gamma;
+        var alpha = event.alpha;
+        var beta = event.beta;
+       console.log(gamma+":"+beta+":"+alpha);
+       if(beta<=80 && beta>=30){
+         balloon.velocityY=balloon.velocityY-1.7;
+         balloon.addAnimation("hotAirBalloon",balloonImage2);
+       }else if(alpha>=20 && alpha<=60){
+        balloon.velocityX=balloon.velocityX-1.7;
+        balloon.addAnimation("hotAirBalloon",balloonImage2);
+       }else if(gamma>=10 && gamma<=40){
+        balloon.velocityX=balloon.velocityX+1.7;
+        balloon.addAnimation("hotAirBalloon",balloonImage2);
+       }else if(beta>=115 & beta<=140){
+        balloon.velocityY=balloon.velocityY+1.7;
+        balloon.addAnimation("hotAirBalloon",balloonImage2);
+       }else if(beta>=91 & beta<=114){
+        balloon.velocityY=balloon.velocityY+1.2;
+       }
+      });
+     </script>
+    </body>
+</html>
