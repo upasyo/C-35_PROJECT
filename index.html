@@ -38,7 +38,7 @@
   </head>
   <body>
       <script src="sketch.js"></script>
-      <script>
+   <script>
         
         window.addEventListener('deviceorientation', function(event) {
         var gamma= event.gamma;
@@ -46,16 +46,32 @@
         var beta = event.beta;
        console.log(gamma+":"+beta+":"+alpha);
        if(beta<=-1 && beta>=-40){
-         balloon.velocityY=balloon.velocityY-0.10;
+         balloon.velocityY=balloon.velocityY-0.7;
          balloon.addAnimation("hotAirBalloon",balloonImage2);
        }else if(gamma<=-5 && gamma>=-40){
-        balloon.velocityX=balloon.velocityX-0.10;
+        balloon.velocityX=balloon.velocityX-0.7;
         balloon.addAnimation("hotAirBalloon",balloonImage2);
        }else if(gamma>=1 && gamma<=40){
-        balloon.velocityX=balloon.velocityX+0.10;
+        balloon.velocityX=balloon.velocityX+0.7;
         balloon.addAnimation("hotAirBalloon",balloonImage2);
        }else if(beta>=1 & beta<=40){
-        balloon.velocityY=balloon.velocityY+0.10;
+        balloon.velocityY=balloon.velocityY+0.7;
+        balloon.addAnimation("hotAirBalloon",balloonImage2);
+       }else if(alpha>=60 && beta>=50 && gamma>=50){
+        balloon.velocityY=balloon.velocityY+0.4;
+        balloon.velocityX=balloon.velocityX+0.7;
+        balloon.addAnimation("hotAirBalloon",balloonImage2);
+       }else if(alpha>=60 && beta<=-15 && gamma <=-15){
+        balloon.velocityY=balloon.velocityY-0.4;
+        balloon.velocityX=balloon.velocityX-0.7;
+        balloon.addAnimation("hotAirBalloon",balloonImage2);
+       }else if(alpha>=60 && beta<=-10 && gamma>=15){
+        balloon.velocityY=balloon.velocityY+0.7;
+        balloon.velocityX=balloon.velocityX+0.4;
+        balloon.addAnimation("hotAirBalloon",balloonImage2);
+       }else if(alpha>=60 && beta<=-15 && gamma<=-15){
+        balloon.velocityY=balloon.velocityY-0.7;
+        balloon.velocityX=balloon.velocityX-0.4;
         balloon.addAnimation("hotAirBalloon",balloonImage2);
        }
       });
