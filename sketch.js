@@ -79,8 +79,8 @@ function draw() {
   drawSprites();
   fill(0);
   stroke("white");
-  textSize(16);
-  text("**Use arrow keys to move Hot Air Balloon!",width/8,40);
+  textSize(13);
+  text("**Use arrow keys or tilt your device to move Air Balloon!",width/8,40);
 }
 
 function updatePosition(x,y){
