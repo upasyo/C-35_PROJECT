@@ -80,7 +80,8 @@ function draw() {
   fill(0);
   stroke("white");
   textSize(13);
-  text("**Use arrow keys or tilt your device to move Air Balloon!",width/8,40);
+  text("**Use arrow keys or tilt your device to move Air Balloon!",width/9,40);
+  text("Make sure to turn rotate off on your device",width/8,45);
 }
 
 function updatePosition(x,y){
