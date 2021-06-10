@@ -45,20 +45,18 @@
         var alpha = event.alpha;
         var beta = event.beta;
        console.log(gamma+":"+beta+":"+alpha);
-       if(beta<=80 && beta>=30){
-         balloon.velocityY=balloon.velocityY-1.7;
+       if(beta<=-1 && beta>=-40){
+         balloon.velocityY=balloon.velocityY-0.7;
          balloon.addAnimation("hotAirBalloon",balloonImage2);
-       }else if(alpha>=20 && alpha<=60){
-        balloon.velocityX=balloon.velocityX-1.7;
+       }else if(gamma<=-5 && gamma>=-40){
+        balloon.velocityX=balloon.velocityX-0.7;
         balloon.addAnimation("hotAirBalloon",balloonImage2);
-       }else if(gamma>=10 && gamma<=40){
-        balloon.velocityX=balloon.velocityX+1.7;
+       }else if(gamma>=1 && gamma<=40){
+        balloon.velocityX=balloon.velocityX+0.7;
         balloon.addAnimation("hotAirBalloon",balloonImage2);
-       }else if(beta>=115 & beta<=140){
-        balloon.velocityY=balloon.velocityY+1.7;
+       }else if(beta>=1 & beta<=40){
+        balloon.velocityY=balloon.velocityY+0.7;
         balloon.addAnimation("hotAirBalloon",balloonImage2);
-       }else if(beta>=91 & beta<=114){
-        balloon.velocityY=balloon.velocityY+1.2;
        }
       });
      </script>
