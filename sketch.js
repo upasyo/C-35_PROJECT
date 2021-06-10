@@ -81,7 +81,7 @@ function draw() {
   stroke("white");
   textSize(13);
   text("**Use arrow keys or tilt your device to move Air Balloon!",width/9,40);
-  text("Make sure to turn rotate off on your device",width/8,45);
+  text("Make sure to rotate to potrait mode on your device",width/8,52);
 }
 
 function updatePosition(x,y){
