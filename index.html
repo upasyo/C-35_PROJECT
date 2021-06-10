@@ -46,16 +46,16 @@
         var beta = event.beta;
        console.log(gamma+":"+beta+":"+alpha);
        if(beta<=-1 && beta>=-40){
-         balloon.velocityY=balloon.velocityY-0.7;
+         balloon.velocityY=balloon.velocityY-0.15;
          balloon.addAnimation("hotAirBalloon",balloonImage2);
        }else if(gamma<=-5 && gamma>=-40){
-        balloon.velocityX=balloon.velocityX-0.7;
+        balloon.velocityX=balloon.velocityX-0.15;
         balloon.addAnimation("hotAirBalloon",balloonImage2);
        }else if(gamma>=1 && gamma<=40){
-        balloon.velocityX=balloon.velocityX+0.7;
+        balloon.velocityX=balloon.velocityX+0.15;
         balloon.addAnimation("hotAirBalloon",balloonImage2);
        }else if(beta>=1 & beta<=40){
-        balloon.velocityY=balloon.velocityY+0.7;
+        balloon.velocityY=balloon.velocityY+0.15;
         balloon.addAnimation("hotAirBalloon",balloonImage2);
        }
       });
