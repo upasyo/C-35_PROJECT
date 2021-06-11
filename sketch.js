@@ -16,7 +16,7 @@ function preload(){
 function setup() {
   database=firebase.database();
  createCanvas(windowWidth,windowHeight);
-  console.log(database);
+
   balloon=createSprite(width/2,height/2,150,150);
   balloon.addAnimation("hotAirBalloon",balloonImage1);
   balloon.scale=0.3;
@@ -33,7 +33,7 @@ function setup() {
   block3.visible=false;
   var balloonPosition=database.ref('balloon/position');
   balloonPosition.on("value",readPosition,showError);
-  balloonPosition.onDisconnect("Please Try this game later or refresh your page");
+
 }
 
 // function to display UI
@@ -41,7 +41,7 @@ function draw() {
   background(bg);
  
 
-
+  
   if(keyDown(LEFT_ARROW)){
     updatePosition(-10,0);
     balloon.addAnimation("hotAirBalloon",balloonImage2);
@@ -67,7 +67,7 @@ function draw() {
     balloon.scale=0.3;
    
   }
-
+  console.log(position);
   balloon.collide(block);
   balloon.collide(block1);
   balloon.collide(block2);
@@ -79,8 +79,8 @@ function draw() {
   drawSprites();
   fill(0);
   stroke("white");
-  textSize(15);
-  text("**Use arrow keys or tilt your device to move Air Balloon!",width/10,40);
+  textSize(14);
+  text("**Use arrow keys or tilt your device to move Air Balloon!",width/30,40);
   text("Make sure to rotate your device to potrait mode",width/8,55);
 }
 
