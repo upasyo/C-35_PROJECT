@@ -49,6 +49,7 @@
        if(beta<=-1 && beta>=-40){
          balloon.velocityY=balloon.velocityY-0.10;
          balloon.addAnimation("hotAirBalloon",balloonImage2);
+         balloon.scale=0.25;
        }else if(gamma<=-1 && gamma>=-45){
         balloon.velocityX=balloon.velocityX-0.10;
         balloon.addAnimation("hotAirBalloon",balloonImage2);
@@ -57,6 +58,7 @@
         balloon.addAnimation("hotAirBalloon",balloonImage2);
        }else if(alpha>=40 && beta>=5 & beta<=60){
         balloon.velocityY=balloon.velocityY+0.10;
+        balloon.scale=0.3;
         balloon.addAnimation("hotAirBalloon",balloonImage2);
        }else if(alpha>=60 && beta>=50 && gamma>=50){
         balloon.velocityY=balloon.velocityY+0.8;
